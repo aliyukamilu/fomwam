@@ -1,0 +1,44 @@
+.header {
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    background-color: #22A8EB;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 20px;
+
+}
+
+.logoContainer {
+    margin-right: 30px;
+    color: #fff;
+}
+
+.header nav {
+    width: 80%;
+}
+
+.header nav a {
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.header nav a.active {
+    background: #1C92CE;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.rightNav {
+    color: #fff;
+}
+
+.rightNav .rightContents {
+    margin-right: 40px;
+}
