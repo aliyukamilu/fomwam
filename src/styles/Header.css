@@ -20,14 +20,14 @@
     width: 80%;
 }
 
-.header nav a {
+.header nav .links {
     color: #fff;
     margin-right: 20px;
     text-decoration: none;
     font-size: 18px;
 }
 
-.header nav a.active {
+.header nav .links.active {
     background: #1C92CE;
     padding: 10px 20px;
     border-radius: 20px;

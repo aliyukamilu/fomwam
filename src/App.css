@@ -42,6 +42,11 @@
   -moz-border-radius: .375rem;
   border-radius: .375rem;
   border: none !important;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-3px)
 }
 .cardhead {
   border-radius: 5px 5px 0 0;
@@ -52,4 +57,5 @@
 .courseTitle {
   font-weight: bold;
   font-size: 18px;
+  color: #000;
 }
