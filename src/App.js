@@ -6,15 +6,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // import pages 
 import Home from './pages/Home'
-import About from './pages/About'
-import CourseLesson from './pages/courseLesson'
+import Course from './pages/Course'
+import CourseLesson from './pages/CourseLesson'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         
-        <Route path="/about" element={<About />} />
+        <Route path="/course" element={<Course />} />
         <Route path="/courseLesson/:courseId" element={<CourseLesson />} />
         <Route path="/" element={<Home />} />
       </Routes>

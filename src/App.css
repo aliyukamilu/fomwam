@@ -45,7 +45,7 @@
   text-decoration: none;
   transition: 0.3s ease-in-out;
 }
-.card:hover {
+.courseCard.card:hover {
   transform: translateY(-3px)
 }
 .cardhead {

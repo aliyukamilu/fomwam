@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 import { Container, Row, Col, Button } from "react-bootstrap"
 import Header from '../components/Header';
@@ -31,7 +31,6 @@ const courses = [
 ]
 
 export default function CourseLesson() {
-
   const params = useParams()
 
   let courseDetail = null
@@ -64,7 +63,7 @@ export default function CourseLesson() {
               <div className="card card-body cardLesCard px-5">
                 <div className="d-flex justify-between align-items-center">
                   <p className="mt-2 mb-0" > {`${courseDetail.title} Progress`}</p>
-                  <img src={require('../img/icons/graphic-designer.png')} style={{width : 40}} alt="" />
+                  <img src={require('../img/icons/graphic-designer.png')} style={{ width: 40 }} alt="" />
                 </div>
 
                 <hr />
@@ -90,8 +89,9 @@ export default function CourseLesson() {
 
 
 const LessonCards = (props) => {
+  const navigate = useNavigate()
   return (
-    <div className="col-sm-4 mb-5">
+    <div className="col-sm-4 mb-5" onClick={() => navigate('/course')}>
       <div className="lessonsRoundCard hover:translate-y-0.5 cursor-pointer transition d-flex justify-center flex-col align-items-center text-center">
         <div className="imgCont rounded-full" style={{ background: `${props.bgColor}` }}>
           <img src={require('../img/icons/graphic-designer.png')} className="lessonImg" alt="" />
@@ -121,7 +121,7 @@ const Progressview = () => {
       <div className="buttonCont">
         <Button className="takeQuiz w-100 d-flex align-items-center justify-between">
           <span className="iconCont rounded-full">
-            <img src={require('../img/icons/open-book.png')} alt="" class="theIcon" />
+            <img src={require('../img/icons/open-book.png')} alt="" className="theIcon" />
           </span>
           <p className="mb-0" style={{ marginRight: '32%' }}>Take Quiz</p>
         </Button>

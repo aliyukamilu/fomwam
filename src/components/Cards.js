@@ -32,7 +32,7 @@ function Cards(props) {
     <>
       {courses.map((course, index) => (
         <div className="col-md-3" key={index}>
-          <Link to={`courseLesson/${course.id}`} className="card">
+          <Link to={`courseLesson/${course.id}`} className="card courseCard">
             <div className="cardhead d-flex justify-content-center py-5" style={{ background: `${colors[index]}` }}>
               <img src={require(`../img/icons/${course.image}`)} alt="notification" className="imgCard" />
             </div>
