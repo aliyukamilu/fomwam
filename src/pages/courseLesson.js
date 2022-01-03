@@ -30,7 +30,7 @@ const courses = [
 
 ]
 
-export default function CourseLesson() {
+export default function Courselesson() {
   const params = useParams()
 
   let courseDetail = null
