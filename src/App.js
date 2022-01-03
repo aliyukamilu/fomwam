@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import pages 
 import Home from './pages/Home'
 import Course from './pages/Course'
-import CourseLesson from './pages/CourseLesson'
+import Courselesson from './pages/Courselesson'
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Routes>
         
         <Route path="/course" element={<Course />} />
-        <Route path="/courseLesson/:courseId" element={<CourseLesson />} />
+        <Route path="/courseLesson/:courseId" element={<Courselesson />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
