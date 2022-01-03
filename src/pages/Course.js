@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Button } from "react-bootstrap";
 
 import { Player } from 'video-react';
 
@@ -64,7 +64,16 @@ function Course() {
 }
 
 const VideoCards = () => {
-  const [isShow, setIsShow] = useState(false);
+  // const [isShow, setIsShow] = useState(false)
+
+  // showOverlay() {
+  //   alert('helllo')
+  // }
+  // function showOverlay(e) {
+    
+  //   // let theOverlay = e.getAttribute(`${e.dataset.vidcard}`)
+  //   console.log("hello")
+  // }
 
   return (
     <>
@@ -73,19 +82,19 @@ const VideoCards = () => {
           <div className="videoCards mb-3"
             style={{ background: `${colors[index]}` }}
             key={index}
-            onMouseEnter={() => setIsShow(true)}
-            onMouseLeave={() => setIsShow(false)}>
+            data-vidcard={index}
+            // onMouseOver={showOverlay()}
+            // onMouseLeave={(this.hideOverlay}
+              >
             <p className="lessonTitle mb-0">Lesson {index + 1}</p>
             <div className="courseImgCont w-100 d-flex justify-center p-3 pb-5">
               <img src={require('../img/icons/graphic-designer.png')} alt="" className="theimg" />
             </div>
-            {isShow && (
-              <div className="overLayBtn text-center" key={index}>
-                <div className="d-flex justify-center align-items-center h-100">
-                  <img src={require('../img/icons/play.png')} alt="" style={{ width: 60 }} />
-                </div>
+            <div className="overLayBtn text-center" data-overcont={index}>
+              <div className="d-flex justify-center align-items-center h-100">
+                <img src={require('../img/icons/play.png')} alt="" style={{ width: 60 }} />
               </div>
-            )}
+            </div>
 
           </div>
         ))
@@ -95,13 +104,25 @@ const VideoCards = () => {
   )
 }
 
-
 const VideoPlayer = () => {
   return (
     <>
-      <Player ref={(player) => { this.player = player }}>
+      <div className="d-flex justify-between align-items-center courseInfo">
+        <p className="courseTitle">Graphics Design</p>
+        <p className="lessonTitle">Lesson : 1</p>
+      </div>
+      <Player style={{ borderRadius: 10 }}>
         <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
       </Player>
+
+      <div className="buttonCont mt-5" style={{width : '38%'}}>
+        <Button className="takeQuiz w-100 d-flex align-items-center justify-between">
+          <span className="iconCont rounded-full">
+            <img src={require('../img/icons/open-book.png')} alt="" className="theIcon" />
+          </span>
+          <p className="mb-0" style={{ marginRight: '32%' }}>Take Quiz</p>
+        </Button>
+      </div>
     </>
   )
 }
